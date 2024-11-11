@@ -5,6 +5,8 @@ Wer eine Aufgabe auf der ToDo Liste gerne machen möchte, einfach Namen dahinter
 Wer eine Aufgabe beendet hat, die Aufgabe auf die Done Liste kopieren und den Namen dahinter schreiben, damit, falls Fragen zu dem Code entstehen, man weiss, wen man ansprechen muss.
 Irgendwelche Einwände zu der Idee?
 
+//David: Ich wuerde eine Art "Work-In Progress" Stage einfuegen fuer Sachen die dauerhaft bearbeitet werden. Dahinter einfach wer es als letzter bearbeitet hat. Kann man vielleicht spaeter in Themen gliedern,damits etwas uebersichtlich bleibt.
+
 ToDo Liste:
 HTML Seiten für den Aufbau der verschiedenen Seiten:
 1. Hauptseite (für Studies, Korrektoren und Organisatoren)
@@ -14,5 +16,10 @@ HTML Seiten für den Aufbau der verschiedenen Seiten:
 5. Design (Stylesheet selbst schreiben oder im Internet suchen)?
 6. Accessibility prüfen
 
-Done Liste:
-1.Erstellen einer ersten Willkommensseite und Loginseite + Testcontroller zum überprüfen [Niklas]
+WorkInProgress:
+- exambyte.SecondWebappApplication.java (Niklas)
+- exambyte.TestController.java (Niklas)
+- login.html (David)
+- welcome.html (David)
+
+Done:
