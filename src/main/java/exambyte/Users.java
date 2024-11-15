@@ -1,5 +1,7 @@
 package exambyte;
 
+import jakarta.validation.constraints.Email;
+
 import java.util.ArrayList;
 
 public class Users {
@@ -12,5 +14,11 @@ public class Users {
             }
         }
         return false;
+    }
+
+    public void addUser(String username, Email email, String password) {
+        User user = new User(username, email, password);
+        users.add(user);
+        return;
     }
 }
