@@ -36,6 +36,11 @@ public class Controller {
         model.addAttribute("passwort", "Passwort");
         return "studentLogin";
     }
+    @GetMapping("/adminLogin")
+    public String adminLogin(){
+        return "adminLogin";
+    }
+
 
 
 }
