@@ -8,7 +8,7 @@ import jakarta.validation.constraints.NotBlank;
 folgende Attribute müssen vermutlich noch hinzugefügt werden: Tests[] Liste mit allen Tests des Users*/
 public record User(
         @NotBlank(message = "Name darf nicht leer sein") String benutzername,
-        @Email(message = "Bitte gültige Email angeben") Email email,
+        @Email(message = "Gültige Email") String email,
         @NotBlank(message = "Passwort darf nicht leer sein") String passwort
 ) {
 }
