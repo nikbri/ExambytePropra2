@@ -40,6 +40,10 @@ public class Controller {
     public String adminLogin(){
         return "adminLogin";
     }
+    @GetMapping("/Startseite")
+    public String landingpage(){
+        return "Startseite";
+    }
 
 
 
