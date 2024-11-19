@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SecondWebappApplication {
+public class ExambyteApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(SecondWebappApplication.class, args);
+    SpringApplication.run(ExambyteApplication.class, args);
   }
 
 }
