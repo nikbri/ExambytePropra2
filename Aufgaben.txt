@@ -8,9 +8,9 @@ HTML Seiten für den Aufbau der verschiedenen Seiten:
 6. Accessibility prüfen
 
 WorkInProgress:
-- exambyte.ExambyteApplication.java (Niklas)
-- exambyte.TestController.java (Niklas)
-- login.html (David)
-- welcome.html (David)
+- ExambyteApplication.java (Niklas)
+- TestController.java (Niklas)
+- Templates (David)
+- Dependencys dringen überprüfen
 
 Done:
