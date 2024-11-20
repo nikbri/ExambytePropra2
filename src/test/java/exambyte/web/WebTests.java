@@ -35,8 +35,9 @@ public class WebTests {
     @Test
     @DisplayName("Login User Exists")
     public void test_login_exists() throws Exception {
-
-        mvc.perform(get("/studentLogin?benutzer=default&passwort=default"))
+        mvc.perform(get("/studentLogin")
+                .param("benutzer","default")
+                .param("passwort","default"))
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/Startseite"));
     }
@@ -44,8 +45,9 @@ public class WebTests {
     @Test
     @DisplayName("Login User do not Exists")
     public void test_login_dont_exists() throws Exception {
-
-        mvc.perform(get("/studentLogin?benutzer=Name&passwort=default"))
+        mvc.perform(get("/studentLogin")
+                .param("benutzer","Name")
+                .param("passwort","default"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("studentLogin"))
                 .andExpect(model().attribute("benutzer", "Name"));
