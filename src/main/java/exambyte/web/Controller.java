@@ -14,6 +14,10 @@ public class Controller {
     LoginManager loginManager = new LoginManager();
 
     @GetMapping("/")
+    public String index(){
+        return "redirect:wellcome";
+    }
+    @GetMapping("/wellcome")
     public String wellcome(){
         return "wellcome";
     }
