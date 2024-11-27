@@ -1,5 +1,6 @@
 package exambyte.web;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest
 public class WebTests {
 
-
     @Autowired
     MockMvc mvc;
-
 
     @Test
     @WithMockUser
@@ -27,6 +26,13 @@ public class WebTests {
                 .andExpect(status().isOk());
     }
 
-
-
+    //Muss noch implementiert werden
+    @Disabled
+    @Test
+    @WithMockUser
+    @DisplayName("Unauthorisierter Zugriff auf StudentHomepage")
+    public void unauthorizedUser() throws Exception {
+        mvc.perform(get("/studentHomepage"))
+                .andExpect(status().isUnauthorized());
+    }
 }
