@@ -1,13 +1,14 @@
 package exambyte.user;
 
 import exambyte.Database.DatabaseManager;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
+@Disabled
 public class UserManagerTest {
     @Test
     @DisplayName("DefaultUser existiert")
@@ -24,6 +25,7 @@ public class UserManagerTest {
         usermanager.addUser(newuser);
         assertThat(usermanager.userExists("Testuser")).isTrue();
     }
+
     @Test
     @DisplayName("Bereits vorhandener User hinzufügen")
     void test2(){

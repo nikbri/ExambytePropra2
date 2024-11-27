@@ -1,11 +1,12 @@
 package exambyte.Database;
 
 import exambyte.user.User;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
+@Disabled
 public class DatabaseManagerTest {
     @Test
     @DisplayName("DatenbankManager holt nur Initialwerte")

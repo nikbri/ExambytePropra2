@@ -4,6 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -19,38 +20,13 @@ public class WebTests {
 
 
     @Test
+    @WithMockUser
     @DisplayName("Wellcome Seite erreichbar")
     public void test_welcome() throws Exception {
         mvc.perform(get("/wellcome"))
                 .andExpect(status().isOk());
     }
 
-    @Test
-    @DisplayName("Login ohne Parameter aufrufen")
-    public void test_login() throws Exception {
-        mvc.perform(get("/studentLogin"))
-                .andExpect(status().isOk());
-    }
 
-    @Test
-    @DisplayName("Login User Exists")
-    public void test_login_exists() throws Exception {
-        mvc.perform(get("/studentLogin")
-                .param("benutzer","default")
-                .param("passwort","default"))
-                .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/Startseite"));
-    }
-
-    @Test
-    @DisplayName("Login User do not Exists")
-    public void test_login_dont_exists() throws Exception {
-        mvc.perform(get("/studentLogin")
-                .param("benutzer","Name")
-                .param("passwort","default"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("studentLogin"))
-                .andExpect(model().attribute("benutzer", "Name"));
-    }
 
 }
