@@ -1,12 +1,11 @@
 ProPra 2 Projekt
+================
+Scwarzes Brett
+---------------
 
-ToDo/-WIP Liste in Aufgaben.txt
+### Ideen Vorschläge Feedback etc.
 
-Wuerde das hier jetzt als Art Schwarzes Brett benutzen, fuer Sachen die nicht in WhatsApp verloren
-gehen sollen. (Neues einfach oben einfugen)
-
-Ideen Vorschläge Feedback etc.
-
-Hab mich an der Entkopplung der Komponenten versucht. Bisschen Feedback ware nice :) -david 20.11.24 
+### Sonstiges:
+Hab Spring Security reingepackt, Ihr müsst euch jetzt bei gitHub diesen OAuth2Token einrichten.
 
 
