@@ -1,5 +1,6 @@
 package exambyte.web;
 
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +18,7 @@ public class Controller {
     }
 
     @GetMapping("/studentHomepage")
+    @Secured("ROLE_STUDENT")
     public String studentlogin(OAuth2AuthenticationToken token, Model model) {
         String login = token.getPrincipal().getAttributes().get("login").toString();
         model.addAttribute("name", login);
@@ -24,6 +26,7 @@ public class Controller {
     }
 
     @GetMapping("/adminHomepage")
+    @Secured("ROLE_ADMIN")
     public String adminLoginGET(){
         return "adminHomepage";
     }
