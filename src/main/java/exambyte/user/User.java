@@ -9,6 +9,7 @@ folgende Attribute müssen vermutlich noch hinzugefügt werden: Tests[] Liste mi
 public record User(
         @NotBlank(message = "Name darf nicht leer sein") String benutzername,
         @Email(message = "Gültige Email") String email,
-        @NotBlank(message = "Passwort darf nicht leer sein") String passwort
+        @NotBlank(message = "Passwort darf nicht leer sein") String passwort,
+        String role
 ) {
 }
