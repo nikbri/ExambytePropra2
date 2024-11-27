@@ -21,7 +21,7 @@ public class WebTests {
     @Test
     @DisplayName("Wellcome Seite erreichbar")
     public void test_welcome() throws Exception {
-        mvc.perform(get("/"))
+        mvc.perform(get("/wellcome"))
                 .andExpect(status().isOk());
     }
 
